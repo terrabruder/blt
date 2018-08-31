@@ -75,10 +75,6 @@ class SettingsCommand extends BltTasks {
       $default_local_settings_file = "$multisite_dir/settings/default.local.settings.php";
       $project_local_settings_file = "$multisite_dir/settings/local.settings.php";
 
-      // Generate default.includes.settings.php.
-      $blt_includes_settings_file = $this->getConfigValue('blt.root') . '/settings/default.includes.settings.php';
-      $default_includes_settings_file = "$multisite_dir/settings/default.includes.settings.php";
-
       // Generate sites/settings/global.settings.default.php.
       $blt_glob_settings_file = $this->getConfigValue('blt.root') . '/settings/global.settings.default.php';
       $default_glob_settings_file = $this->getConfigValue('docroot') . "/sites/settings/global.settings.default.php";
@@ -91,7 +87,6 @@ class SettingsCommand extends BltTasks {
       $copy_map = [
         $blt_local_settings_file => $default_local_settings_file,
         $default_local_settings_file => $project_local_settings_file,
-        $blt_includes_settings_file => $default_includes_settings_file,
         $blt_glob_settings_file => $default_glob_settings_file,
         $blt_local_drush_file => $default_local_drush_file,
         $default_local_drush_file => $project_local_drush_file,
