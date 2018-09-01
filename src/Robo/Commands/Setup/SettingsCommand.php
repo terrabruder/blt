@@ -87,7 +87,6 @@ class SettingsCommand extends BltTasks {
       $copy_map = [
         $blt_local_settings_file => $default_local_settings_file,
         $default_local_settings_file => $project_local_settings_file,
-        $blt_glob_settings_file => $default_glob_settings_file,
         $blt_local_drush_file => $default_local_drush_file,
         $default_local_drush_file => $project_local_drush_file,
       ];
